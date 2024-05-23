@@ -1,0 +1,148 @@
+site_name: Free Pascal 手册
+repo_url: https://github.com/Sharp-Enrich/Free-Pascal-Handbook
+edit_uri: edit/master/docs/
+site_url: https://Free-Pascal-Handbook.readthedocs.io
+site_description: Free Pascal,Object Pascal,Delphi,Lazarus
+site_author: Tacey Wong
+copyright: ©2024 Tacey Wong
+docs_dir: docs
+nav:
+  - 写在前面: 
+    - 概览: index.md
+    - 协议: LICENSE.md
+  - 第一部：基础篇:
+    - 卷首: 1_00.md 
+    - 第一章：用 Pascal 写程序 :  1_01.md
+    - 第二章：变量与数据型别 : 1_02.md
+    - 第三章：语言叙述句 : 1_03.md
+    - 第四章：程序与函式 : 1_04.md
+    - 第五章：数组与记录 : 1_05.md
+    - 第六章：关于字符串 : 1_06.md
+  - 第⼆部：OOP/面向对象:
+    - 卷首: 2_00.md
+    - 第七章：物件: 2_01.md
+    - 第八章：继承: 2_02.md
+    - 第九章：例外处理: 2_03.md
+    - 第十章：属性与事件: 2_04.md
+    - 第十一章：接口: 2_05.md
+    - 第十二章：操纵类别: 2_06.md
+    - 第十三章：对象与内存: 2_07.md
+  - 第三部：进阶功能:
+    - 卷首: 3_00.md
+    - 第十四章：泛型: 3_01.md
+    - 第十五章：匿名方法: 3_02.md
+    - 第十六章：镜射与属性: 3_03.md
+    - 第十七章：TObject 类别: 3_04.md
+    - 第十八章：执行时期函式库: 3_05.md
+  - 附录:
+    - Lazarus的安装与使用: 4_01.md
+    - 创建一个简单Lazarus窗体应用: 4_02.md
+  - 极简版:
+    - 概览: 5_00.md
+
+
+  
+theme:
+  logo: logo.png
+  name: material
+  language: zh
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.expand
+    - content.code.copy
+    - content.code.select
+
+  palette:
+    - scheme: default
+      primary: black
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: 切换至暗色主题
+    - scheme: slate 
+      primary: black
+      toggle:
+        icon: material/toggle-switch
+        name: 切换至浅色主题
+
+markdown_extensions:
+  - tables
+  - attr_list
+  - md_in_html
+  - footnotes
+  - admonition
+  - pymdownx.details
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - pymdownx.snippets:
+      encoding: utf-8
+  - pymdownx.highlight:
+      use_pygments: true
+      auto_title: true
+      linenums: true
+      linenums_style: pymdownx-inline
+      pygments_lang_class: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+plugins:
+  - glightbox
+  - search
+  # - with-pdf
+        #author: WHO
+        #copyright: ANY TEXT
+        #
+        #cover: false
+        #back_cover: true
+        #cover_title: TITLE TEXT
+        #cover_subtitle: SUBTITLE TEXT
+        #custom_template_path: TEMPLATES PATH
+        #
+        #toc_title: TOC TITLE TEXT
+        #heading_shift: false
+        #toc_level: 3
+        #ordered_chapter_level: 2
+        #excludes_children:
+        #    - 'release-notes/:upgrading'
+        #    - 'release-notes/:changelog'
+        #
+        #exclude_pages:
+        #    - 'bugs/'
+        #    - 'appendix/contribute/'
+        #convert_iframe:
+        #    - src: IFRAME SRC
+        #      img: POSTER IMAGE URL
+        #      text: ALTERNATE TEXT
+        #    - src: ...
+        # two_columns_level: 3
+        #
+        #render_js: true
+        #headless_chrome_path: headless-chromium
+        #
+        #output_path: any-place/document.pdf
+        #enabled_if_env: ENABLE_PDF_EXPORT
+        #
+        #debug_html: true
+        #show_anchors: true
+        #verbose: true 
+  # - pdf-export:
+  #     verbose: true
+  #     combined: true
+  #     enabled_if_env: ENABLE_PDF_EXPORT  
+
+extra:
+  generator: false
+  disqus: golang-cookbook
+# https://github.com/zhaoterryy/mkdocs-pdf-export-plugin
+# pip install mkdocs-pdf-export-plugin
+       
